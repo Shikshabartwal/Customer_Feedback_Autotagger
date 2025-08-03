@@ -1,0 +1,10 @@
+flask
+flask-cors
+textblob
+nltk
+scikit-learn
+joblib
+streamlit
+pandas
+matplotlib
+requests
