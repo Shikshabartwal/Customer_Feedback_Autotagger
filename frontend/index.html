@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Feedback Auto-Tagger & Sentiment</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>🔮 Feedback Magic</h1>
+    <textarea id="feedback" placeholder="Paste your feedback here..."></textarea>
+    <button id="analyze-btn">Analyze Feedback</button>
+    <button id="download-btn">Download History</button>
+
+    <div id="results" class="hidden">
+      <h2>Results</h2>
+      <p><strong>Tags:</strong> <span id="tags" title="Generated based on detected keywords"></span></p>
+      <small>🛈 Tags are auto-generated from keywords like fit, comfort, price, etc.</small>
+      <p><strong>Sentiment:</strong> <span id="sentiment-icon"></span> <span id="sentiment"></span></p>
+      <p><strong>Sentiment Score:</strong> <span id="score"></span></p>
+
+      <div class="confidence">
+        <strong>Tag Match Confidence:</strong>
+        <div class="bar-container">
+          <div id="confidence-bar" class="bar-fill"></div>
+        </div>
+      </div>
+
+      <h3>📊 Tag Frequency Chart</h3>
+      <canvas id="tagChart" width="400" height="200"></canvas>
+
+      <h3>📈 Sentiment Distribution</h3>
+      <canvas id="sentimentChart" width="400" height="200"></canvas>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
